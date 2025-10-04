@@ -113,8 +113,8 @@ if prompt:
             if "image" in msg:
                 parts.append(msg["image"])
                 
-            api_history.append(
-                genai.types.Content(role=msg["role"], parts=parts)
+           # api_history.append(
+            #    genai.types.Content(role=msg["role"], parts=parts)
             )
 
     # Tambahkan input user yang baru (sudah ada di user_content_parts)
@@ -167,4 +167,5 @@ if prompt:
     # Hanya simpan jawaban asisten (text) ke riwayat
     st.session_state.messages.append({"role": "assistant", "text": answer})
     
+
     st.rerun()
